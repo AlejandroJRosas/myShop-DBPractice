@@ -3,7 +3,7 @@ export interface Product {
   name: string
   unitPrice: number
   unitsOnStock: number
-  category?: string
+  categoryId?: number
   createdAt?: Date
   updatedAt?: Date
 }

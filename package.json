@@ -1,13 +1,13 @@
 {
   "name": "myshop-dbpractice",
-  "version": "1.0.0",
+  "version": "0.1.2",
   "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev src/index.ts",
-    "start": "node build/index.js",
-    "tsc": "tsc",
-    "lint": "ts-standard"
+    "start": "npm run build && npm run prod",
+    "prod": "node build/index.js",
+    "build": "tsc"
   },
   "repository": {
     "type": "git",

@@ -1,13 +1,14 @@
 import express from 'express'
-import { addProduct, getProducts } from '../../controllers/products'
-import { Product } from '../../types/product'
+
+import * as product from '../../controllers/products'
+import { Product as ProductType } from '../../types/product'
 
 const router = express.Router()
 
 router.get('/', (_req, res) => {
   void (async () => {
     try {
-      const r = await getProducts()
+      const r = await product.getProducts()
       res.send(r)
     } catch (e) {
       console.error(e)
@@ -16,13 +17,14 @@ router.get('/', (_req, res) => {
 })
 
 router.post('/', (req, res) => {
-  const { name, unitPrice, unitsOnStock } = req.body as Product
+  const { name, unitPrice, unitsOnStock } = req.body as ProductType
   const newProduct = {
     name,
     unitPrice,
     unitsOnStock
   }
-  const resultado = async (): Promise<Product> => await addProduct(newProduct)
+  const resultado = async (): Promise<ProductType> =>
+    await product.addProduct(newProduct)
   resultado()
     .then((prom) => res.send(prom))
     .catch((error) => res.send(error))
