@@ -1,7 +1,7 @@
 # MyShop General Backend Practice 🗃
 
-![GitHub last commit](https://img.shields.io/github/last-commit/AlejandroJRosas/myShop-DBPractice)
-![GitHub package.json version](https://img.shields.io/github/package-json/v/AlejandroJRosas/myShop-DBPractice)
+![GitHub last commit](https://img.shields.io/github/last-commit/alejandrojrosas/myShop-DBPractice)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/alejandrojrosas/myShop-DBPractice)
 
 API Rest using Xampp/PHPMyAdmin MySQL Database for learning/practice purposes.
 
