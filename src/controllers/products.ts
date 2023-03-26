@@ -8,7 +8,13 @@ export const getProducts = async (): Promise<Product[]> => {
   return rows
 }
 
-export const addProduct = async (product: Product): Promise<Product> => {
-  const result = pool.query('INSERT INTO products SET ?', product)
-  return result
+export const addProduct = async (product: Product): Promise<string> => {
+  try {
+    const result = await pool.query('INSERT INTO products SET ?', product)
+    console.log('Resultado: ', result)
+  } catch (error: any) {
+    console.log(error.errno)
+    return 'jodete mano'
+  }
+  return 'Fino mano'
 }

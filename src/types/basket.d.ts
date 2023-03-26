@@ -3,6 +3,4 @@ export interface Basket {
   shipped: boolean
   totalPrice: number
   userId: number
-  createdAt?: Date
-  updatedAt?: Date
 }

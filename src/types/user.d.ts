@@ -5,6 +5,4 @@ export interface User {
   password: string
   cash: number
   roleId?: number
-  createdAt?: Date
-  updatedAt?: Date
 }

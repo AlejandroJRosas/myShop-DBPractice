@@ -4,6 +4,4 @@ export interface Product {
   unitPrice: number
   unitsOnStock: number
   categoryId?: number
-  createdAt?: Date
-  updatedAt?: Date
 }

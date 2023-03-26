@@ -23,7 +23,7 @@ router.post('/', (req, res) => {
     unitPrice,
     unitsOnStock
   }
-  const resultado = async (): Promise<ProductType> =>
+  const resultado = async (): Promise<string> =>
     await product.addProduct(newProduct)
   resultado()
     .then((prom) => res.send(prom))

@@ -4,6 +4,4 @@ export interface Order {
   quantity: number
   basketId: number
   productId: number
-  createdAt?: Date
-  updatedAt?: Date
 }
