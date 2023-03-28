@@ -1,37 +1,20 @@
 import express from 'express'
 
-import * as roles from '../../controllers/roles'
+import {
+  getRoles,
+  getRoleById,
+  addRole,
+  deleteRole,
+  updateRole
+} from '../../controllers/roles.controller'
 
-const router = express.Router()
+const router = express.Router() 
 
-router.get('/', (_req, res) => {
-  void (async () => {
-    await roles.getRoles(res)
-  })()
-})
-
-router.get('/:id', (req, res) => {
-  void (async () => {
-    await roles.getRoleById(req, res)
-  })()
-})
-
-router.post('/', (req, res) => {
-  void (async () => {
-    await roles.createRole(req, res)
-  })()
-})
-
-router.delete('/:id', (req, res) => {
-  void (async () => {
-    await roles.deleteRole(req, res)
-  })()
-})
-
-router.patch('/:id', (req, res) => {
-  void (async () => {
-    await roles.updateRole(req, res)
-  })()
-})
+/* eslint-disable @typescript-eslint/no-misused-promises */
+router.get('/', getRoles)
+router.get('/:roleId', getRoleById)
+router.post('/', addRole)
+router.delete('/:roleId', deleteRole)
+router.put('/:roleId', updateRole)
 
 export default router

@@ -1,4 +1,8 @@
 export interface Role {
-  id?: number
-  role: string
+  id: number
+  name: string
+  createdAt: Date
+  updatedAt: Date
 }
+
+export type RolesRequestBody = Pick<Role, 'name'>

@@ -2,7 +2,10 @@ import express from 'express'
 import morgan from 'morgan'
 
 import { PORT } from './config'
+import { synchronizeTables } from './database/table-sync'
 import apiRouter from './routes/api'
+
+void synchronizeTables()
 
 // App Declaration
 const app = express()
